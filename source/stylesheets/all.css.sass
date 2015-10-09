@@ -3,3 +3,23 @@
 @import "bourbon"
 @import "base/base"
 @import "neat"
+
+// Global Styles
+.wrapper
+  +outer-container
+
+// Page-Specific Styles
+section.definitions
+  article
+    +span-columns(6)
+    +shift(6)
+    p
+      +span-columns(5 of 6)
+    &.verb
+      background-image: image-url('verb-circle-3x.png')
+      background-repeat: no-repeat
+      background-position: right top
+    &.noun
+      background-image: image-url('noun-circle-3x.png')
+      background-repeat: no-repeat
+      background-position: right top
