@@ -4,22 +4,102 @@
 @import "base/base"
 @import "neat"
 
-// Global Styles
+
+/// Global Styles ///
+
 .wrapper
   +outer-container
+h1
+  font:
+    family: serif
+    size: rem(48)
+h5
+  font:
+    family: serif
+    size: rem(21)
+    style: italic
 
-// Page-Specific Styles
-section.definitions
+/// Section Styles ///
+
+header
+  padding: rem(100) rem(30) rem(50)
+  font-family: serif
   article
-    +span-columns(6)
-    +shift(6)
+    +span-columns(12)
+  h1
+    margin-bottom: rem(20)
+
+section.definitions
+  font:
+    family: serif
+    size: rem(21)
+  article
+    +span-columns(7)
+    +shift(5)
+    padding-left: rem(70)
+    +media($medium-screen)
+      +span-columns(8)
+      +shift(4)
+    +media($small-screen)
+      +span-columns(12)
+      +shift(0)
+      padding-left: rem(30)
+      padding-right: rem(30)
     p
       +span-columns(5 of 6)
+      +media($small-screen)
+        +span-columns(6 of 6)
     &.verb
       background-image: image-url('verb-circle-3x.png')
       background-repeat: no-repeat
-      background-position: right top
+      background-size: 109px 109px
+      background-position: 80% 0%
+      margin-bottom: rem(50)
     &.noun
       background-image: image-url('noun-circle-3x.png')
       background-repeat: no-repeat
-      background-position: right top
+      background-size: 95px 95px
+      background-position: 0% 40%
+      margin-bottom: rem(120)
+      +media($small-screen)
+        margin-bottom: rem(40)
+
+section.about
+  aside
+    +span-columns(5)
+    padding-left: rem(30)
+    padding-right: rem(30)
+    +media($medium-screen)
+      +span-columns(4)
+    +media($small-screen)
+      +span-columns(12)
+      margin-bottom: rem(40)
+    img
+      width: 36px
+      height: 118px
+  article
+    +span-columns(7)
+    padding-left: rem(70)
+    +media($medium-screen)
+      +span-columns(8)
+    +media($small-screen)
+      +span-columns(12)
+      padding-left: rem(30)
+      padding-right: rem(30)
+
+footer
+  margin-top: rem(100)
+  font-size: rem(11)
+  color: #bbb
+  article
+    +span-columns(7)
+    +shift(5)
+    padding-left: rem(70)
+    +media($medium-screen)
+      +span-columns(8)
+      +shift(4)
+    +media($small-screen)
+      +span-columns(12)
+      +shift(0)
+      padding-left: rem(30)
+      padding-right: rem(30)
